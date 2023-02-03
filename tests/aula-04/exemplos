@@ -1,0 +1,8 @@
+#!/usr/bin/env bash 
+
+usuario=$(whoami)
+echo "Usuário: $usuario" 
+
+maquina=`hostname`
+echo "Máquina: $maquina"
+

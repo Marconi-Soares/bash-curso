@@ -1,0 +1,6 @@
+#!/bin/bash 
+
+read -p "Digite seu nome: " nome 
+mensagem="Olá, $nome"
+echo $mensagem 
+
