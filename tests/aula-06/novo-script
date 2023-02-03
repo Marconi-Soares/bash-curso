@@ -1,0 +1,39 @@
+#!/usr/bin/env bash 
+nome_do_script=$1
+
+#CONFIGURAÇÕES
+#Abrir com...
+[[ $# -ge 2 ]] && editor=$2 || editor='nano'
+
+#CABEÇALHO
+hoje=$( date +'%d/%m/%Y' )
+cabecalho="#!/usr/bin/env bash
+# ------------------------------------------------------------
+# Script     :
+# Descrição  :
+# Versão     : 1.0
+# Autor      : Marconi S. de Jesus <marconi.developer@outlook.com.br>
+# Licença    : GNU/GPL v3.0
+# Data       : $hoje
+# ------------------------------------------------------------
+# Uso:
+# ------------------------------------------------------------
+"
+
+#TESTES
+#Usuário passou o número certo de argumentos... (1 argumento)
+mensagem_de_erro='Err: Número incorreto de argumentos'
+[[ $# -gt 2 ]] && echo $mensagem_de_erro && exit 1
+
+#Arquivo com esse nome já existe...
+mensagem_de_erro='Err: Já existe um arquivo com esse nome'
+[[ -f $nome_do_script ]] && echo $mensagem_de_erro && exit 1
+
+
+#MAIN
+#Cria um arquivo executavel com a #! já pronta...
+echo "$cabecalho" > $nome_do_script 
+chmod +x $nome_do_script
+$editor $nome_do_script
+exit 1 
+
