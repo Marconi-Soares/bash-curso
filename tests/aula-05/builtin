@@ -1,11 +1,17 @@
 #!/usr/bin/env bash  
 
-# executa "help" para verificar se vai conseguir
-# mostrar a ajuda do comando (sucesso) ou não (erro)
+# Testa se foi passado um argumento
+mensagem='É preciso informar o nome de um comando valido'
+[[ $# -ne 1 ]] && echo $mensagem && exit 1
 
-help ls &> /dev/null
+
+# executa \'help\' para verificar se vai conseguir
+# mostrar a ajuda do comando (sucesso) ou não (erro)
+param=$1 
+help $param &> /dev/null
 
 # Usar comando "test" para avaliar a expressão...
-[[ $? -eq 0 ]] && echo "É builtin <3" || echo "Não é builtin :-("
+teste=$?
+[[ $teste -eq 0 ]] && echo "É builtin <3" || echo "Não é builtin :-("
 exit 0 
 

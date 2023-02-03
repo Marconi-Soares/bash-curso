@@ -1,0 +1,9 @@
+$$ - armazena o PID da sessão corrente do shell
+
+$? - armazena o status de saída de um comando
+
+$0 - armazena o nome do programa executado 
+     pela ordem de ocorrência
+
+$# - armazena o número de argumentos passados 
+     para o script.
