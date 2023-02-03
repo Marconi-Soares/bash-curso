@@ -1,0 +1,11 @@
+#!/usr/bin/env bash  
+
+# executa "help" para verificar se vai conseguir
+# mostrar a ajuda do comando (sucesso) ou não (erro)
+
+help ls &> /dev/null
+
+# Usar comando "test" para avaliar a expressão...
+[[ $? -eq 0 ]] && echo "É builtin <3" || echo "Não é builtin :-("
+exit 0 
+

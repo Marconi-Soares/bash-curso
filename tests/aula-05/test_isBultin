@@ -1,0 +1,1 @@
+[[ 0 -eq 0 ]] && echo é bultin || echo não é builtin
