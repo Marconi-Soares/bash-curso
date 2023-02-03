@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# ------------------------------------------------------------
+# Script     : checapid
+# Descrição  : Compara PID do script e do shell no terminal
+# Versão     : 1.0
+# Autor      : Marconi S. de Jesus <marconi.developer@outlook.com.br>
+# Licença    : GNU/GPL v3.0
+# Data       : 03/02/2023
+# ------------------------------------------------------------
+# Uso: /caminho/checapid ou ./checapid
+# ------------------------------------------------------------
+clear 
+
+echo "
+PID da sessão do bash do script  : $$
+PID da sessão do bash no terminal: $PPID
+"
+
+ps -p $$,$PPID -o pid=,user=,tty=,args=
+
