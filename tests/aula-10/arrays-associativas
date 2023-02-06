@@ -31,6 +31,7 @@ nota[sofia]=9
 nota[fatima]=8
 nota[antonio]=7
 
-echo ""
-echo "os identificadores dos alunos são: ${!aluno[*]}"
-echo "os nomes dos alunos são:           ${aluno[*]}"
+echo -e "
+os identificadores dos alunos são: ${!aluno[*]}
+os nomes dos alunos são:           ${aluno[*]}
+"
