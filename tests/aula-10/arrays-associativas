@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+# ------------------------------------------------------------
+# Script     : arrays-associativas
+# Descrição  :
+# Versão     : 1.0
+# Autor      : Marconi S. de Jesus <marconi.developer@outlook.com.br>
+# Licença    : GNU/GPL v3.0
+# Data       : 06/02/2023
+# ------------------------------------------------------------
+# Uso: ./arrays-associativas ou ~/scripts/tests/aula-10/arrays-associativas
+# ------------------------------------------------------------
+clear 
+
+echo "Exemplo de trabalho com arrays-associativas..."
+
+
+declare -A aluno
+declare -A nota 
+
+aluno[joao]="João"
+aluno[jose]="José"
+aluno[maria]="Maria"
+aluno[sofia]="Sofia"
+aluno[fatima]="Fatima"
+aluno[antonio]="Antonio"
+
+nota[joao]=10
+nota[jose]=9
+nota[maria]=10
+nota[sofia]=9
+nota[fatima]=8
+nota[antonio]=7
+
+echo ""
+echo "os identificadores dos alunos são: ${!aluno[*]}"
+echo "os nomes dos alunos são:           ${aluno[*]}"

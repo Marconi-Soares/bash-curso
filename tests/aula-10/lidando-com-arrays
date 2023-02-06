@@ -1,0 +1,9 @@
+# ARRAYS INDEXADAS
+
+# Quantidade de elementos: ${#nome[@]}
+# Listar todos os valores: ${nome[*]}
+# Listar todos os índices: ${!nome[*]}
+
+# ARRAYS ASSOCIATIVAS
+
+# declare -A <nome da array>
