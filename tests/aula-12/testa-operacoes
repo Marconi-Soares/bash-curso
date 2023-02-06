@@ -1,0 +1,71 @@
+#!/usr/bin/env bash
+# ------------------------------------------------------------
+# Script     :
+# Descrição  :
+# Versão     : 1.0
+# Autor      : Marconi S. de Jesus <marconi.developer@outlook.com.br>
+# Licença    : GNU/GPL v3.0
+# Data       : 06/02/2023
+# ------------------------------------------------------------
+# Uso:
+# ------------------------------------------------------------
+
+clear 
+
+echo "\
+  Operadores Aritiméticos Básicos:
+  **                     exponenciação
+  *, /, %                multiplicação, divisão, resto de divisão
+  +, -                   adição, subtração
+
+Digite qualquer expressão com os operadores acima
+e tecle enter para efetuar o cálculo.
+
+Exemplo: 2 + 2
+"
+
+read -p "Sua expressão: " expressao 
+
+[[ ${#expressao} -lt 1 ]] && exit 
+
+let calc="$expressao"
+
+echo "
+- Utilizando o comando 'let \"$expressao\"':
+
+$expressao = $calc
+"
+
+# Utilizando o comando composto (( EXPRESSAO ))...
+
+(( calc = $expressao ))
+
+echo "
+- Utilizando o comando composto '(( $expressao))':
+
+$expressao = $calc
+"
+
+# Utilizando a expenão aritmética...
+
+calc=$(( $expressao ))
+
+echo "
+- Utilizando a expansão aritmética '\$(( $expressao ))':
+
+$expressao = $calc
+"
+
+# Alterando atributo de inteiro 'declare -i var=EXPRESSÃO'
+
+declare -i calc="$expressao"
+
+echo "
+- Alterando atributo de inteiro 'declare -i var=\"$expressao\"':
+
+$expressao = $calc
+"
+
+declare +i calc 
+
+exit
