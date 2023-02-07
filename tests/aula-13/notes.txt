@@ -1,0 +1,11 @@
+# *  : Padrão de zero ou mais caracteres (menos o ponto no início de nomes de arquivos)
+# ?  : Um único caractere (menos o ponto no início do nome do arquivo)
+# [] : Lista de caracteres válidos na posição que ela aparece
+ 
+ 
+# {inicio...fim}       : Intervalo de strings a serem geradas
+# {str1,str2,...,strN} : Lista de strings
+
+# Quebras de palavras e separadores de campo
+
+# Remoção de aspas
