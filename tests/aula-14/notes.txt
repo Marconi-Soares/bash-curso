@@ -1,0 +1,52 @@
+Aula 14 - Expansão de Parâmetros 
+
+'PARÂMETRO' AQUI, TEM O MESMO SENTIDO DE 'VARIÁVEL'
+
+1. Velhas conhecidas
+====================
+
+$nome ou ${nome} --> expande para o valor de 'nome'
+${nome[indice]}  --> expande para o valor em 'nome[indice]'
+${nome[@|*]}     --> expande para os valores de todos os elementos da array 'nome'
+${!nome[@|*]}    --> expande para os índices dos elementos em 'nome'
+${#nome[@|*]}    --> expande para o número de elementos em 'nome'
+
+
+2. Substrings
+====================
+${nome:posição:quantidade}
+
+
+3. Testando variáveis
+====================
+
+${nome:-valor_padrao} --> expande para 'valor_padrão' se 'nome' não existe ou é nulo
+${nome:=valor_padrao} --> expande para 'valor_padrao} se 'nome' não existe e atribui 'valor_padrao' a 'nome'
+${nome:+valor}        --> expande para 'valor' se 'nome' existe ou nada se 'nome' não existe
+${nome:?mensagem}     --> escreve 'mensagem' na saída de erro se 'nome' não existe ou é nulo
+
+
+4. Maiúsculas e minúsculas
+====================
+
+${variavel^}  --> Primeiro caractere em caixa alta.
+${variavel^^} --> Todos os caracteres em caixa alta.
+${variavel,}  --> Primeiro caractere em caixa baixa.
+${variavel,,} --> Todos os caracteres em caixa baixa.
+
+
+5. Aparando strings
+====================
+
+Caracteres especiais para representar padrões: * ? [...]
+
+${variavel#padrão}  --> Todo o início da string será aparado até a primeira ocorrência do padrão.
+${variavel##padrão} --> Todo o início da string será aparado até a última
+
+
+6. Busca e substituição
+=====================
+
+${variavel/padrão/string}  --> Substitui a primeira ocorrência de 'padrão' por 'string'.
+${variavel//padrão/string} --> Substitui todas as ocorrências de 'padrão por 'sintrg'.
+
