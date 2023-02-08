@@ -1,0 +1,33 @@
+1. Sintaxe geral:
+
+for NOME [in LISTA]; do
+    COMANDOS
+done
+
+Em uma linha...
+
+for NOME [in LISTA]; do COMANDOS; done
+
+Onde...
+
+NOME      --> Variável que armazena temporariamente
+              os valores de cadaelemento da LISTA.
+
+in LISTA  --> (opcional) É a lista de valores que serão percorridos.
+              quando omitido, o loop 'for' assuma que 'in LISTA' são 
+              todos os argumentos passados para o script (in $@). 
+              Quando utilizamos uma expressão aritmética,ela substitui 
+              toda a instrução 'in LISTA'.
+
+
+
+2. Expressão aritmética como 'in LISTA'
+
+for (( expressão 1; expressão 2; expressão 3 )); do
+    COMANDOS
+done 
+
+Geralmente...
+
+expressão 1 --> É uma atribuição de um valor inicial.
+

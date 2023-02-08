@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# ------------------------------------------------------------
+# Script     :
+# Descrição  :
+# Versão     : 1.0
+# Autor      : Marconi S. de Jesus <marconi.developer@outlook.com.br>
+# Licença    : GNU/GPL v3.0
+# Data       : 07/02/2023
+# ------------------------------------------------------------
+# Uso:
+# ------------------------------------------------------------
+
+for argumento; do 
+  echo $argumento
+done
+
+exit 0
