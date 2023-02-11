@@ -1,0 +1,23 @@
+# LOOP FOR 
+
+for NOME [in LISTA]; do
+    COMANDOS
+done
+
+#LOOP WHILE 
+
+while CONDIÇÃO; do
+    COMANDOS
+done
+
+# LOOP UNTIL
+
+until CONDIÇÃO; do 
+    COMANDOS
+done
+
+# LOOP SELECT
+
+select NOME [in LISTA]; do
+    COMANDOS
+done

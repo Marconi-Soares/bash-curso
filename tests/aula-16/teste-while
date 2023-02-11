@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# ------------------------------------------------------------
+# Script     :
+# Descrição  :
+# Versão     : 1.0
+# Autor      : Marconi S. de Jesus <marconi.developer@outlook.com.br>
+# Licença    : GNU/GPL v3.0
+# Data       : 10/02/2023
+# ------------------------------------------------------------
+# Uso:
+# ------------------------------------------------------------
+n=0
+while [[ $n -le 5 ]]; do
+  echo $n
+  ((n++))
+done
