@@ -5,21 +5,27 @@
 # Versão     : 1.0
 # Autor      : Marconi S. de Jesus <marconi.developer@outlook.com.br>
 # Licença    : GNU/GPL v3.0
-# Data       : 07/02/2023
+# Data       : 10/02/2023
 # ------------------------------------------------------------
 # Uso:
 # ------------------------------------------------------------
+alunos=(João Maria "Luis Carlos")
 
-echo "==============="
-echo "Usando expressões aritméticas"
-
-for ((i=0;i<=10;i++)); do
-  echo $i
+echo "Nomes"
+for nome in "${alunos[@]}"; do
+  echo $nome
 done
 
 echo "==============="
-echo "Usando expansões aritméticas"
+echo "Indice"
 
-for i in {1..10}; do 
-  echo $i
+for indice in ${!alunos[@]}; do
+  echo $indice
+done
+
+echo "==============="
+echo "Nome com Indice"
+
+for i in ${!alunos[@]}; do 
+  echo "aluno $i --> ${alunos[$i]}"
 done

@@ -5,21 +5,24 @@
 # Versão     : 1.0
 # Autor      : Marconi S. de Jesus <marconi.developer@outlook.com.br>
 # Licença    : GNU/GPL v3.0
-# Data       : 07/02/2023
+# Data       : 10/02/2023
 # ------------------------------------------------------------
 # Uso:
 # ------------------------------------------------------------
+compras='pão
+leite
+ovos
+margarina
+café'
 
-echo "==============="
-echo "Usando expressões aritméticas"
-
-for ((i=0;i<=10;i++)); do
-  echo $i
+for p in $compras; do
+  echo $p
 done
 
-echo "==============="
-echo "Usando expansões aritméticas"
+echo "==============="  
+compras=$'pão\nleite\novos\nmargarina\ncafé'
 
-for i in {1..10}; do 
-  echo $i
+for p in $compras; do
+  echo $p
 done
+

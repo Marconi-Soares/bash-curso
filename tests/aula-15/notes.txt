@@ -31,3 +31,73 @@ Geralmente...
 
 expressão 1 --> É uma atribuição de um valor inicial.
 
+
+
+
+4. Percorrendo as palavras de uma string
+
+for v in banana laranja abacate; do
+    echo $v
+done
+
+ou...
+
+frutas="banana laranja abacate"
+for v in $frutas; do 
+    echo $v 
+done 
+
+* Alterando o IFS (evitar sempre)
+* A expansão das aspas $'...'
+
+
+
+5. Percorrendo elementos de uma array
+====================================
+
+valores...
+
+for v in ${minha_array[@]}; do
+    echo $v
+done
+
+Índices...
+
+for i in ${!minha_array[@]}; do
+    ecoh $i
+done 
+
+
+
+6. Percorrendo nomes de arquivos
+====================================
+
+for file in <expansão de nomes de arquivos>; do
+    echo $file
+done
+
+
+7. Percorrendo faixas alfanuméricas
+=====================================
+
+for n in <expansão de chaves>; do
+    echo $n
+done 
+
+Nota: isso substitui 99% dos casos onde, em outras
+linguagens. nós utilizaríamos expressões aritméticas.
+
+
+
+8. Controlando a execução do loop 'for'
+========================================
+* break     --> interrompe a execução do loop
+* continue --> não executa comandos e continua o loop
+
+Comando 'break'...
+
+for NOME [in LISTA]; do
+    [[ CONDIÇÃO ]] && break
+done
+
+
