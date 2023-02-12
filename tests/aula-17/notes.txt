@@ -5,3 +5,13 @@ elif
 else
     COMANDOS SE ERRO/FALSE
 fi
+
+
+
+
+case VALOR in 
+    PADRÃO) BROCO DE COMANDOS;;        
+    PADRÃO) BROCO DE COMANDOS;;
+    PADRÃO) BROCO DE COMANDOS;;
+esac
+

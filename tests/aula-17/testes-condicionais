@@ -26,11 +26,21 @@
 #  echo "O nome da fruta não é banana, é sim $fruta."
 #fi
 
-teste=0
-if ((teste)); then
-  echo Verdadero
-else 
-  echo Falso
-fi
+# teste=0
+# if ((teste)); then
+#  echo Verdadero
+# else 
+#  echo Falso
+# fi
+
+
+fruta=$1
+
+case $fruta in 
+   banana|laranja) echo "$fruta é amarela" ;;
+  abacate|uva) echo "$fruta é verde"       ;;
+  morango) echo "$fruta é vermelha"        ;;
+        *) echo "Não sei a cor da fruta $1";;
+esac
 
 exit 0
