@@ -1,0 +1,8 @@
+funtion NOME {
+    COMANDOS
+}
+
+
+NOME() {
+    COMANDOS
+}

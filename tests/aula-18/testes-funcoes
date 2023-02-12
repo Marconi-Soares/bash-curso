@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# ------------------------------------------------------------
+# Script     :
+# Descrição  :
+# Versão     : 1.0
+# Autor      : Marconi S. de Jesus <marconi.developer@outlook.com.br>
+# Licença    : GNU/GPL v3.0
+# Data       : 11/02/2023
+# ------------------------------------------------------------
+# Uso:
+# ------------------------------------------------------------
+source ~/scripts/tests/aula-18/teste-mod.sh
+
+case $1 in 
+  1) nome=Goku;;
+  2) nome=Vegeta;;
+  3) nome=Gohan;;
+  *) nome=Anônimo;;
+esac
+
+teste_oi $nome
