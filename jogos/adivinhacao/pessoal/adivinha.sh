@@ -10,6 +10,7 @@
 # Uso:
 # ------------------------------------------------------------
 
+
 desenha_tela() {
   clear
   echo -e "\
@@ -33,7 +34,7 @@ numero_isValid() {
     return 1
   fi
 
-  if [[ $numero -le 0 || $numero -gt 100 ]]; then
+  if [[ $numero -lt 0 || $numero -gt 100 ]]; then
     echo 'Este número não é válido'
     invalidate_number
     return 1
@@ -48,13 +49,8 @@ get_numero() {
 }
 
 gerar_key() {
-  export key=$(( $RANDOM / 1000 ))
+  export key=$(( $RANDOM / 325 ))
 }
-
-msg_ganhou="
-PARABÊNS! Você acertou o número.
-"
-
 msg_greater="
 Valor muito alto!
 "
@@ -64,13 +60,14 @@ Valor muito baixo!
 "
 
 finalizar() {
+  msg_ganhou="PARABÊNS! Você acertou o número em $tentativas tentativas."
   echo -e $msg_ganhou
   read -p "Aperte algo para continuar..." ignore
 }
 
 jogar() {
   while true; do 
-   
+    ((tentativas++))
     [[ $numero = 'err' ]] && get_numero
 
     [[ $numero = $key ]] && finalizar && break 
@@ -86,6 +83,8 @@ jogar() {
 
 main() {
   while true; do
+    export tentativas=0
+
     desenha_tela
     
     get_numero
