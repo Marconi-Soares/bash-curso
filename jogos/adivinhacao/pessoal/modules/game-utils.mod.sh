@@ -22,7 +22,7 @@ gm_gerar_key() {
   export key=$(( $RANDOM / 325 ))
 }
 
-gm_finalizar() {
+finalizar() {
   msg_ganhou="PARABÊNS! Você acertou o número em $tentativas tentativas."
   echo -e $msg_ganhou
   read -p "Aperte algo para continuar..." ignore
@@ -33,7 +33,7 @@ gm_jogar() {
     ((tentativas++))
     [[ $numero = 'err' ]] && num_get_numero
 
-    [[ $numero = $key ]] && gm_finalizar && break 
+    [[ $numero = $key ]] && finalizar && break 
     
     [[ $numero -gt $key ]] && echo -e $msg_greater
 
